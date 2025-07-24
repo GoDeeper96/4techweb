@@ -1,5 +1,5 @@
 import type React from "react"
-import { Text, Link } from "@fluentui/react-components"
+import { Text } from "@fluentui/react-components"
 import tech from '../assets/tech.png'
 
 export const Footer: React.FC = () => {

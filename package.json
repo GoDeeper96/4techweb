@@ -3,11 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "homepage": "https://GoDeeper96.github.io/4techweb",
+ "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "start": "vite start",
+   "build": "tsc -b && vite build"
+
   },
   "dependencies": {
     "@fluentui/react": "^8.122.14",

@@ -1,6 +1,6 @@
 import type React from "react"
 import { Card, CardHeader, Text, Button } from "@fluentui/react-components"
-import { BoxCheckmarkRegular,BoxToolboxFilled, CodeFilled, ArrowRight16Regular, BoxCheckmark24Regular, BoxToolbox24Filled, Code24Filled } from "@fluentui/react-icons"
+import {ArrowRight16Regular, BoxCheckmark24Regular, BoxToolbox24Filled, Code24Filled } from "@fluentui/react-icons"
 
 const Services: React.FC = () => {
 const services = [

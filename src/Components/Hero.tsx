@@ -1,6 +1,5 @@
 import type React from "react"
-import { Button, Text } from "@fluentui/react-components"
-import { ArrowRight24Regular, Play24Regular } from "@fluentui/react-icons"
+import {  Text } from "@fluentui/react-components"
 
 const Hero: React.FC = () => {
   return (
