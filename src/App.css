@@ -607,9 +607,13 @@
 
   .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .about-text {
+    max-width: 800px;
+    width: 100%;
   }
 
   .about-cards {
