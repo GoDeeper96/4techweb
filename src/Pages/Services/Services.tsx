@@ -1,6 +1,6 @@
 import type React from "react"
-import { Card, CardHeader, Text, Button } from "@fluentui/react-components"
-import {ArrowRight16Regular, BoxCheckmark24Regular, BoxToolbox24Filled, Code24Filled } from "@fluentui/react-icons"
+import { Card, CardHeader, Text } from "@fluentui/react-components"
+import { BoxCheckmark24Regular, BoxToolbox24Filled, Code24Filled } from "@fluentui/react-icons"
 
 const Services: React.FC = () => {
 const services = [
@@ -69,14 +69,14 @@ const services = [
                   </span>
                 ))}
               </div>
-              <Button
+              {/* <Button
                 appearance="subtle"
                 icon={<ArrowRight16Regular />}
                 iconPosition="after"
                 className="service-button"
               >
                 Saber más
-              </Button>
+              </Button> */}
             </Card>
           ))}
         </div>

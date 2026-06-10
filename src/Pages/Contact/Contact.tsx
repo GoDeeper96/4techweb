@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
                 <Mail24Regular className="contact-icon" />
                 <div>
                   <Text weight="semibold">Email:</Text>
-                  <Text> contacto@techconsultpro.com</Text>
+                  <Text> contacto@eya-tech.com</Text>
                 </div>
               </div>
               <div className="contact-item">
