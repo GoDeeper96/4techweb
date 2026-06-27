@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react"
 import { Text, Button } from "@fluentui/react-components"
-import { Bot24Filled, PersonAccounts24Filled, Headphones24Filled, ReceiptMoney24Filled, ArrowRight16Regular } from "@fluentui/react-icons"
+import { Bot24Filled, CalendarCheckmark24Filled, Headphones24Filled, ReceiptMoney24Filled, ArrowRight16Regular } from "@fluentui/react-icons"
 import ProductModal, { type ProductDetail } from "../../Components/ProductModal"
 
 // ── Mockup SVGs ────────────────────────────────────────────────────────────────
@@ -24,22 +24,31 @@ const ChatMockup = () => (
 
 const AppMockup = () => (
   <svg viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: "100%", maxWidth: 130 }}>
-    <rect x="20" y="10" width="120" height="180" rx="16" stroke="white" strokeOpacity="0.4" strokeWidth="2" fill="white" fillOpacity="0.08" />
-    <rect x="55" y="14" width="50" height="8" rx="4" fill="white" fillOpacity="0.3" />
-    <rect x="28" y="30" width="104" height="22" rx="4" fill="white" fillOpacity="0.22" />
-    <text x="80" y="45" textAnchor="middle" fontSize="10" fill="white" fillOpacity="0.9" fontWeight="600">MeVeoBien</text>
-    <rect x="28" y="60" width="104" height="30" rx="6" fill="white" fillOpacity="0.18" />
-    <rect x="36" y="68" width="40" height="6" rx="3" fill="white" fillOpacity="0.6" />
-    <rect x="36" y="78" width="60" height="4" rx="2" fill="white" fillOpacity="0.35" />
-    <rect x="28" y="98" width="104" height="30" rx="6" fill="white" fillOpacity="0.15" />
-    <rect x="36" y="106" width="50" height="6" rx="3" fill="white" fillOpacity="0.6" />
-    <rect x="36" y="116" width="70" height="4" rx="2" fill="white" fillOpacity="0.35" />
-    <rect x="28" y="136" width="104" height="30" rx="6" fill="white" fillOpacity="0.12" />
-    <rect x="36" y="144" width="35" height="6" rx="3" fill="white" fillOpacity="0.6" />
-    <rect x="36" y="154" width="55" height="4" rx="2" fill="white" fillOpacity="0.35" />
-    <circle cx="65" cy="178" r="4" fill="white" fillOpacity="0.6" />
-    <circle cx="80" cy="178" r="4" fill="white" fillOpacity="0.3" />
-    <circle cx="95" cy="178" r="4" fill="white" fillOpacity="0.3" />
+    {/* Phone frame */}
+    <rect x="10" y="4" width="140" height="192" rx="16" stroke="white" strokeOpacity="0.35" strokeWidth="1.5" fill="white" fillOpacity="0.06" />
+    {/* WhatsApp-green header */}
+    <rect x="10" y="4" width="140" height="36" rx="16" fill="white" fillOpacity="0.22" />
+    <rect x="10" y="20" width="140" height="20" fill="white" fillOpacity="0.22" />
+    <circle cx="30" cy="22" r="9" fill="white" fillOpacity="0.4" />
+    <text x="30" y="26" textAnchor="middle" fontSize="8" fill="white" fillOpacity="0.9" fontWeight="700">R</text>
+    <text x="78" y="19" textAnchor="middle" fontSize="9" fill="white" fillOpacity="0.95" fontWeight="700">Reservalo</text>
+    <text x="78" y="30" textAnchor="middle" fontSize="7" fill="white" fillOpacity="0.6">en línea</text>
+    {/* Bot bubble 1 */}
+    <rect x="14" y="48" width="98" height="22" rx="10" fill="white" fillOpacity="0.2" />
+    <text x="22" y="62" fontSize="7.5" fill="white" fillOpacity="0.9">¿Qué servicio necesitas?</text>
+    {/* User bubble */}
+    <rect x="58" y="78" width="88" height="20" rx="10" fill="white" fillOpacity="0.32" />
+    <text x="66" y="92" fontSize="7.5" fill="white" fillOpacity="0.95">Cita para mañana 🗓</text>
+    {/* Bot bubble 2 */}
+    <rect x="14" y="106" width="112" height="32" rx="10" fill="white" fillOpacity="0.2" />
+    <text x="22" y="119" fontSize="7.5" fill="white" fillOpacity="0.9">Disponible mañana:</text>
+    <text x="22" y="131" fontSize="7.5" fill="white" fillOpacity="0.75">• 10:00 am  • 3:00 pm</text>
+    {/* User reply */}
+    <rect x="84" y="146" width="62" height="20" rx="10" fill="white" fillOpacity="0.32" />
+    <text x="92" y="160" fontSize="7.5" fill="white" fillOpacity="0.95">3:00 pm ✓</text>
+    {/* Confirmation bubble */}
+    <rect x="14" y="172" width="120" height="18" rx="9" fill="white" fillOpacity="0.25" />
+    <text x="74" y="184" textAnchor="middle" fontSize="7" fill="white" fillOpacity="0.9">✅ ¡Reserva confirmada!</text>
   </svg>
 )
 
@@ -201,34 +210,34 @@ const productDetails: ProductDetail[] = [
     ],
   },
   {
-    name: "MeVeoBien App",
-    tagline: "Visibilidad real del recorrido de tus usuarios — y el camino para mejorarlo.",
-    gradient: "linear-gradient(135deg, #00bcf2, #40e0d0)",
+    name: "Reservalo",
+    tagline: "Tu agenda llena, gestionada por IA en WhatsApp — sin contestar el teléfono.",
+    gradient: "linear-gradient(135deg, #25D366, #128C7E)",
     slides: [
       {
         label: "Situación actual",
-        title: "Los clientes abandonan, pero nadie sabe dónde ni por qué",
-        body: "Los datos existen pero están dispersos. Las decisiones de mejora se toman por intuición, no por evidencia.",
+        title: "Los clientes intentan reservar, pero nadie contesta — y se van a la competencia",
+        body: "La agenda se maneja por llamadas perdidas, grupos de WhatsApp o cuadernos. Los no-shows generan pérdidas y no hay forma de anticiparlos.",
         visual: <AsIsToBeVisual
-          asIs={["Decisiones de diseño basadas en suposiciones", "Abandono sin datos de causa raíz", "Rediseños costosos sin validación previa"]}
-          toBe={["Comportamiento real capturado en tiempo real", "Puntos de fricción identificados automáticamente", "Mejoras priorizadas por impacto medible"]}
+          asIs={["Reservas perdidas por falta de respuesta inmediata", "Agenda en cuadernos o grupos de WhatsApp sin control", "No-shows sin previo aviso generan tiempo y dinero perdido"]}
+          toBe={["IA responde y agenda automáticamente 24/7", "Agenda centralizada y actualizada en tiempo real", "Recordatorios automáticos reducen no-shows un 40%"]}
         />,
       },
       {
         label: "Objetivo",
-        title: "Decisiones de mejora basadas en comportamiento real",
-        body: "Cada iniciativa de optimización respaldada por evidencia — no supuestos.",
-        visual: <AppBanner gradient="linear-gradient(135deg, #00bcf2, #40e0d0)"><AppMockup /></AppBanner>,
+        title: "El cliente reserva en WhatsApp en lenguaje natural — sin formularios, sin apps",
+        body: "La IA entiende la solicitud, muestra disponibilidad, confirma la cita y envía recordatorios. Todo en la conversación.",
+        visual: <AppBanner gradient="linear-gradient(135deg, #25D366, #128C7E)"><AppMockup /></AppBanner>,
       },
       {
         label: "Validación",
-        title: "Validado con empresas que tienen productos digitales activos",
+        title: "Validado con clínicas, consultorios, salones y restaurantes",
         body: "",
         bullets: [
-          "Pilotos con empresas de e-commerce, salud digital y servicios financieros",
-          "En todos los casos identificamos puntos de fricción que los equipos internos desconocían",
-          "Las mejoras priorizadas generaron aumentos de conversión medibles en menos de 60 días",
-          "Los equipos redujeron el tiempo de toma de decisión de semanas a días",
+          "Pilotos con negocios de servicios donde la reserva por teléfono es el cuello de botella principal",
+          "En todos los casos, más del 60% de reservas llegaron fuera del horario de atención",
+          "Los negocios reportaron reducción inmediata de carga administrativa en recepción",
+          "Clientes valoran la confirmación instantánea y los recordatorios automáticos",
         ],
       },
       {
@@ -236,18 +245,18 @@ const productDetails: ProductDetail[] = [
         title: "KPIs que mejoramos en cada implementación",
         body: "",
         bullets: [
-          "Tasa de conversión en flujos optimizados: aumento del 25–40%",
-          "Tasa de abandono en onboarding: reducción del 35%",
-          "Tiempo hasta primera mejora accionable: menos de 2 semanas",
-          "Satisfacción de usuario (CSAT): incremento del 22% en promedio",
-          "Decisiones de diseño basadas en datos: de 20% a más del 80%",
+          "Reservas gestionadas sin intervención humana: más del 70%",
+          "Reducción de no-shows con recordatorio automático: 40%",
+          "Incremento de reservas en horario no laboral: +35%",
+          "Tiempo promedio de confirmación de cita: menos de 2 minutos",
+          "Reducción de carga administrativa en recepción: 60%",
         ],
       },
       {
         label: "El flujo",
-        title: "Del comportamiento a la mejora concreta",
+        title: "Del mensaje al calendario — sin fricción",
         body: "",
-        visual: <WorkflowVisual color="#00bcf2" steps={["Comportamiento del usuario capturado en tiempo real", "IA identifica fricción y abandono", "Diagnóstico priorizado por impacto", "Mejoras implementadas y medidas antes/después"]} />,
+        visual: <WorkflowVisual color="#25D366" steps={["Cliente escribe por WhatsApp en lenguaje natural", "IA entiende el servicio, fecha y hora deseada", "Confirma disponibilidad y registra la reserva", "Recordatorio automático + integración a pagos y SUNAT"]} />,
       },
     ],
   },
@@ -357,7 +366,7 @@ const productDetails: ProductDetail[] = [
 
 const products = [
   { mockup: <ChatMockup />, gradient: "linear-gradient(135deg, #0078d4, #00bcf2)", icon: <Bot24Filled />, title: "Chatbots Inteligentes", description: "Asistentes virtuales con IA que atienden a tus clientes 24/7, resuelven consultas y mejoran la conversión.", tag: "IA & Automatización" },
-  { mockup: <AppMockup />, gradient: "linear-gradient(135deg, #00bcf2, #40e0d0)", icon: <PersonAccounts24Filled />, title: "MeVeoBien App", description: "Aplicación enfocada en mejorar la experiencia de usuario (UX) de tus clientes en cada punto de contacto.", tag: "UX / Mobile" },
+  { mockup: <AppMockup />, gradient: "linear-gradient(135deg, #25D366, #128C7E)", icon: <CalendarCheckmark24Filled />, title: "Reservalo", description: "Agente IA en WhatsApp que gestiona citas en lenguaje natural 24/7, con recordatorios automáticos, pagos y facturación SUNAT.", tag: "WhatsApp / IA" },
   { mockup: <AudioMockup />, gradient: "linear-gradient(135deg, #1a1a2e, #0078d4)", icon: <Headphones24Filled />, title: "BriefyAI", description: "IA que convierte reuniones, documentos y reportes en briefs ejecutivos estructurados y accionables.", tag: "IA / Productividad" },
   { mockup: <InvoiceMockup />, gradient: "linear-gradient(135deg, #005a9e, #0078d4)", icon: <ReceiptMoney24Filled />, title: "VentaIQ", description: "POS inteligente con facturación electrónica integrada con SUNAT, gestión de inventario y operación multi-local.", tag: "Fintech / SUNAT" },
 ]
