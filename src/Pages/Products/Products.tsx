@@ -31,7 +31,7 @@ const AppMockup = () => (
     <rect x="10" y="20" width="140" height="20" fill="white" fillOpacity="0.22" />
     <circle cx="30" cy="22" r="9" fill="white" fillOpacity="0.4" />
     <text x="30" y="26" textAnchor="middle" fontSize="8" fill="white" fillOpacity="0.9" fontWeight="700">R</text>
-    <text x="78" y="19" textAnchor="middle" fontSize="9" fill="white" fillOpacity="0.95" fontWeight="700">Reservalo</text>
+    <text x="78" y="19" textAnchor="middle" fontSize="9" fill="white" fillOpacity="0.95" fontWeight="700">CitaloApp</text>
     <text x="78" y="30" textAnchor="middle" fontSize="7" fill="white" fillOpacity="0.6">en línea</text>
     {/* Bot bubble 1 */}
     <rect x="14" y="48" width="98" height="22" rx="10" fill="white" fillOpacity="0.2" />
@@ -210,7 +210,7 @@ const productDetails: ProductDetail[] = [
     ],
   },
   {
-    name: "Reservalo",
+    name: "CitaloApp",
     tagline: "Tu agenda llena, gestionada por IA en WhatsApp — sin contestar el teléfono.",
     gradient: "linear-gradient(135deg, #25D366, #128C7E)",
     slides: [
@@ -366,7 +366,7 @@ const productDetails: ProductDetail[] = [
 
 const products = [
   { mockup: <ChatMockup />, gradient: "linear-gradient(135deg, #0078d4, #00bcf2)", icon: <Bot24Filled />, title: "Chatbots Inteligentes", description: "Asistentes virtuales con IA que atienden a tus clientes 24/7, resuelven consultas y mejoran la conversión.", tag: "IA & Automatización" },
-  { mockup: <AppMockup />, gradient: "linear-gradient(135deg, #25D366, #128C7E)", icon: <CalendarCheckmark24Filled />, title: "Reservalo", description: "Agente IA en WhatsApp que gestiona citas en lenguaje natural 24/7, con recordatorios automáticos, pagos y facturación SUNAT.", tag: "WhatsApp / IA" },
+  { mockup: <AppMockup />, gradient: "linear-gradient(135deg, #25D366, #128C7E)", icon: <CalendarCheckmark24Filled />, title: "CitaloApp", description: "Agente IA en WhatsApp que gestiona citas en lenguaje natural 24/7, con recordatorios automáticos, pagos y facturación SUNAT.", tag: "WhatsApp / IA" },
   { mockup: <AudioMockup />, gradient: "linear-gradient(135deg, #1a1a2e, #0078d4)", icon: <Headphones24Filled />, title: "BriefyAI", description: "IA que convierte reuniones, documentos y reportes en briefs ejecutivos estructurados y accionables.", tag: "IA / Productividad" },
   { mockup: <InvoiceMockup />, gradient: "linear-gradient(135deg, #005a9e, #0078d4)", icon: <ReceiptMoney24Filled />, title: "VentaIQ", description: "POS inteligente con facturación electrónica integrada con SUNAT, gestión de inventario y operación multi-local.", tag: "Fintech / SUNAT" },
 ]
