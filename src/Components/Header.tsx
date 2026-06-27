@@ -29,12 +29,13 @@ export const Header: React.FC = () => {
     
           <Button appearance="subtle" onClick={() => scrollToSection('hero')}>Inicio</Button>
           <Button appearance="subtle" onClick={() => scrollToSection('services')}>Servicios</Button>
+          <Button appearance="subtle" onClick={() => scrollToSection('products')}>Productos</Button>
           <Button appearance="subtle" onClick={() => scrollToSection('about')}>Nosotros</Button>
           <Button appearance="subtle" onClick={() => scrollToSection('contact')}>Contacto</Button>
         </nav>
 
         <div className="header-actions">
-          <Button appearance="primary">Consulta Gratuita</Button>
+          <Button appearance="primary" onClick={() => scrollToSection("contact")}>Consulta Gratuita</Button>
         </div>
 
         <div className="mobile-menu">
@@ -50,6 +51,7 @@ export const Header: React.FC = () => {
               <MenuList>
                <MenuItem onClick={() => scrollToSection('hero')}>Inicio</MenuItem>
                 <MenuItem onClick={() => scrollToSection('services')}>Servicios</MenuItem>
+                <MenuItem onClick={() => scrollToSection('products')}>Productos</MenuItem>
                 <MenuItem onClick={() => scrollToSection('about')}>Nosotros</MenuItem>
                 <MenuItem onClick={() => scrollToSection('contact')}>Contacto</MenuItem>
               </MenuList>

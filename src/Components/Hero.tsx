@@ -1,7 +1,12 @@
 import type React from "react"
-import {  Text } from "@fluentui/react-components"
+import { Button, Text } from "@fluentui/react-components"
+import { ArrowRight24Regular, Apps24Regular } from "@fluentui/react-icons"
 
 const Hero: React.FC = () => {
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
+
   return (
     <section className="hero" id="hero">
       <div className="hero-container">
@@ -14,20 +19,32 @@ const Hero: React.FC = () => {
               con tecnología de vanguardia
             </Text>
             <Text as="p" className="hero-description">
-             Creamos soluciones innovadoras que potencian tus operaciones y están diseñadas para escalar junto con tu crecimiento. Garantizamos continuidad, rendimiento y adaptabilidad a largo plazo.
+              Creamos soluciones innovadoras que potencian tus operaciones y están diseñadas para escalar junto con tu
+              crecimiento. Garantizamos continuidad, rendimiento y adaptabilidad a largo plazo.
             </Text>
-            {/* <div className="hero-actions">
-              <Button appearance="primary" size="large" icon={<ArrowRight24Regular />} iconPosition="after">
+            <div className="hero-actions">
+              <Button
+                appearance="primary"
+                size="large"
+                icon={<ArrowRight24Regular />}
+                iconPosition="after"
+                onClick={() => scrollToSection("contact")}
+              >
                 Comenzar Proyecto
               </Button>
-              <Button appearance="subtle" size="large" icon={<Play24Regular />}>
-                Ver Demo
+              <Button
+                appearance="subtle"
+                size="large"
+                icon={<Apps24Regular />}
+                onClick={() => scrollToSection("products")}
+              >
+                Ver Productos
               </Button>
-            </div> */}
+            </div>
           </div>
           <div className="hero-image">
             <div className="hero-graphic">
-              <img src="/img/hero-tech.png"  className="hero-background-image" />
+              <img src="/img/hero-tech.png" className="hero-background-image" />
               <div className="floating-card card-1">
                 <div className="card-content">
                   <div className="card-icon saas-icon"></div>
