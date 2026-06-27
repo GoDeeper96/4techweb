@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
           </div>
           <div className="hero-image">
             <div className="hero-graphic">
-              <img src="/img/hero-tech.png" className="hero-background-image" />
+              <img src="/img/hero-tech.png" className="hero-background-image" onError={e => { (e.target as HTMLImageElement).style.display = "none" }} />
               <div className="floating-card card-1">
                 <div className="card-content">
                   <div className="card-icon saas-icon"></div>

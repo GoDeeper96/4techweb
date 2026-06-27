@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Card, Text, Input, Textarea, Button, Field } from "@fluentui/react-components"
 import { Send24Regular, Mail24Regular, Phone24Regular, CheckmarkCircle24Regular } from "@fluentui/react-icons"
 
-const CONTACT_API = import.meta.env.VITE_CONTACT_API_URL || ""
+const CONTACT_API = import.meta.env.VITE_CONTACT_API_URL || "https://eya-tech-contact.azurewebsites.net"
 
 const Contact: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", empresa: "", mensaje: "" })
